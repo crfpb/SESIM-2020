@@ -412,9 +412,6 @@ syn_CV_partitioning <- function(X_saved){
   
   # transform abundance into biomass
   X_biom <- X_saved
-  #for(i in 1:dim(X_biom)[1]){
-  #  X_biom[i,6:14] <- X_biom[i,6:14]*mass
-  #}
   
   # create empty array of dimensions
   # row=spp, column=time(10), array=patch(5)
@@ -633,9 +630,6 @@ syn_CV_partitioning_abund <- function(X_saved){
   
   # transform abundance into biomass
   X_biom <- X_saved
-  #for(i in 1:dim(X_biom)[1]){
-  #  X_biom[i,6:14] <- X_biom[i,6:14]*mass
-  #}
   
   # create empty array of dimensions
   # row=spp, column=time(10), array=patch(5)

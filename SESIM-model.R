@@ -17,7 +17,7 @@ source("./functions.R")
 # model scenario
 # choose "species" for multi-trophic food-web 
 # or "competitive" for purely competitive interactions 
-scenario <- "species" # or "competitive"
+scenario <- "species" # "species" or "competitive"
 
 # input parameters
 # ignore warning
@@ -69,7 +69,8 @@ for(ePeriod in eP){
     for(j in 1:ncol(BB_pos)){
       for(i in 1:nrow(BB_pos)){
         set.seed(xseed[r])
-        pos[i,j] <- runif(1, min=min(0, BB_pos[i,j]), max=max(0, BB_pos[i,j]))
+        #pos[i,j] <- runif(1, min=min(0, BB_pos[i,j]), max=max(0, BB_pos[i,j]))
+        pos[i,j] <- runif(1, min=min(BB_pos[i,j]/2, BB_pos[i,j]), max=max(BB_pos[i,j]/2, BB_pos[i,j]))
       }
     }
     pos[pos > 0] <- 0
@@ -77,7 +78,8 @@ for(ePeriod in eP){
     for(j in 1:ncol(BB_neg)){
       for(i in 1:nrow(BB_neg)){
         set.seed(xseed[r])
-        neg[i,j] <- runif(1, min=min(0, BB_neg[i,j]), max=max(0, BB_neg[i,j]))
+        #neg[i,j] <- runif(1, min=min(0, BB_neg[i,j]), max=max(0, BB_neg[i,j]))
+        neg[i,j] <- runif(1, min=min(BB_neg[i,j]/2, BB_neg[i,j]), max=max(BB_neg[i,j]/2, BB_neg[i,j]))
        }
     }
     

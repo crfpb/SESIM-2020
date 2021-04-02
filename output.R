@@ -18,4 +18,4 @@ results <- data.frame(treatment=rep(NA, dim(experiment)[1]*numCom*reps),
 sync_cv_results <- data.frame(replicates=as.numeric(), environment=as.numeric(), 
                               patch=as.numeric(), species=as.character(),
                               scale=as.character(), trophic=as.character(),
-                              synchrony=as.numeric(), CV=as.numeric())
+                              synchrony=as.numeric(), variability=as.numeric())

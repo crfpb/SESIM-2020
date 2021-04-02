@@ -50,7 +50,7 @@ if(scenario=="competitive"){
   BB_pos <- pos <- fullFW_pos
   BB_pos[BB_pos > 0] <- 0
   # competitive interactions matrix
-  comp_BB <- comp <- matrix(c(-0.1, rep(-0.05, nSp)), nSp, nSp)/10
+  comp_BB <- neg <- comp <- matrix(c(-0.1, rep(-0.05, nSp)), nSp, nSp)/10
   # positive interactions matrix
   BB_neg <- comp_BB 
 }
@@ -63,5 +63,6 @@ eA <- 1
 # strength of environmental effect
 enveff <- 1
 # period of environmental fluctuation
-eP <- c(0, 1, 3)
+eP <- c(0, 1, 3)   # for main results
+#eP <- c(0:300)      # for sensitivity analysis of eP
 
